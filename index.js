@@ -1,4 +1,4 @@
-const tutorials = [
+let tutorials = [
   'what does the this keyword mean?',
   'What is the Constructor OO pattern?',
   'implementing Blockchain Web API',
@@ -11,6 +11,12 @@ const tutorials = [
   'what is JSONP?'
 ];
 
-const titleCased = () => {
-  return tutorials
+function titleCased(){
+  const arr = tutorials.map(s => 
+    s.split(' ').map(w=>
+                      w[0].toUpperCase() + w.slice(1)
+                      ).join(' '));
+  return arr;
 }
+// let x = titleCased();
+// console.log (x)
